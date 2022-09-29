@@ -1,7 +1,6 @@
 const { Pizza } = require('../models');
 
 const pizzaController = {
-  // the functions will go in here as methods
 
 //  get all pizzas
   getAllPizza(req, res) {
@@ -59,6 +58,7 @@ updatePizza({ params, body }, res) {
       })
       .catch(err => res.status(400).json(err));
   },
+  
   // delete pizza
 deletePizza({ params }, res) {
     Pizza.findOneAndDelete({ _id: params.id })
